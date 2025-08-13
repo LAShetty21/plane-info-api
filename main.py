@@ -29,6 +29,7 @@ def plane_info():
         "DAL": "Delta",
         "OCN": "Discover",
         "EZY": "easyJet",
+        "EJU": "easyJet Europe"
         "MSR": "Egypt Air",
         "UAE": "Emirates",
         "ETD": "Etihad",
