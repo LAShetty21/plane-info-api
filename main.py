@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST"])
 def plane_info():
-    url = "https://api.adsb.lol/v2/closest/48.3447763/11.7199019/5"
+    url = "https://api.adsb.lol/v2/closest/48.316408/11.693400/1"
 
     AIRLINE_CODES = {
         "AEE": "Aegean",
@@ -72,7 +72,7 @@ def plane_info():
             aircraft_type = ac.get("t") or ac.get("type") or "Unknown"
             airline_code = callsign[:3].upper()
             airline_name = AIRLINE_CODES.get(airline_code, "Unknown Airline")
-            speech = f"The nearest plane is from {airline_name} and the aircraft type is {aircraft_type}."
+            speech = f"The aircraft is {aircraft_type} from {airline_name}."
     except Exception as e:
         speech = f"Error fetching flight data: {str(e)}"
 
